@@ -5,145 +5,214 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="icon" href="my1.jpg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <style>
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+ <style>
+    /* Common styles for all screen sizes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-nav{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 100px;
-        background-color: rgb(43, 43, 90) ;
-    }
-    nav ul{
-        display: flex;
-        justify-content: center;
-    }
-    nav ul li{
-        list-style: none;
-        margin: 0 25px;
-        font-size: 20px;
-    }
-    nav ul li a{
-        text-decoration: none;
-        color:white;
-    }
-    nav ul li a:hover{
-        color:rgb(204, 204, 204);
-        cursor: pointer;
-        border: 2px dotted green;
-        padding: 3px;
-        
-    }
-    .call{
-        margin-left: 30px;
-        
-    }
-    .call a{
-        text-decoration: none;
-        color:white
-    }
-    .call span{
-        color: green;
-    }
 
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(43, 43, 90);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(204, 204, 204);
+    cursor: pointer;
+    border: 2px dotted green;
+    padding: 3px;
+}
+
+.call {
+    margin-left: 15px;
+}
+
+.call a {
+    text-decoration: none;
+    color: white;
+}
+
+.call span {
+    color: green;
+}
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* Contact Section Styles */
 .contact-section {
-  background-color: #f1f1f1;
-  padding: 40px 0;
-  text-align: center;
+    background-color: #f1f1f1;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .contact-section h2 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .contact-section form input,
 .contact-section form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .contact-section form input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
+/* Footer Styles */
 .footer {
-  background-color: rgb(43, 43, 90);
-  color: #fff;
-  padding: 40px 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+    background-color: rgb(43, 43, 90);
+    color: #fff;
+    padding: 40px 0;
 }
 
 .footer-columns {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .footer-column {
-  flex-basis: 30%;
-  text-align: left;
-  margin-bottom: 20px;
+    flex-basis: calc(33.33% - 20px);
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .footer h3 {
-  color: #fff;
+    color: #fff;
 }
 
-.footer p, .footer ul {
-  margin: 10px 0;
+.footer p,
+.footer ul {
+    margin: 10px 0;
 }
 
 .footer ul {
-  padding: 0;
-  list-style-type: none;
+    padding: 0;
+    list-style-type: none;
 }
 
 .footer ul li {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .footer ul li a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 .footer ul li a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .social-icons {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .social-icon {
-  display: inline-block;
-  margin-right: 10px;
-  color: #fff;
-  font-size: 24px;
-  transition: transform 0.3s;
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s;
 }
 
 .social-icon:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .call {
+        margin-left: 10px;
+    }
+
+    .call a {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .contact-section form input,
+    .contact-section form textarea {
+        font-size: 14px;
+    }
+
+    .contact-section form input[type="submit"] {
+        font-size: 14px;
+    }
+
+    .footer-column {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav ul li {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+
+    .call {
+        margin-left: 5px;
+    }
+
+    .call a {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .contact-section form input,
+    .contact-section form textarea {
+        font-size: 12px;
+    }
+
+    .contact-section form input[type="submit"] {
+        font-size: 12px;
+    }
+
+    .footer-column {
+        flex-basis: 100%;
+    }
 }
 
   </style>
